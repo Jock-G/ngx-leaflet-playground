@@ -3,14 +3,21 @@
   <div class="map"
        id="leaflet"
        leaflet
+       [(leafletZoom)]="zoom"
+       [(leafletCenter)]="center"
        [leafletOptions]="options"
        [leafletLayers]="layers"
-       (leafletCenterChange)="manageLeafletCenterChange($event)">
+       (leafletCenterChange)="manageLeafletCenterChange($event)"
+       (leafletClick)="onLeafletClick($event)"
+       (leafletDoubleClick)="onLeafletDoubleClick($event)"
+  (leafletZoomChange)="onLeafletZoomChange($event)">
     <div *ngIf="showLayer" [leafletLayers]="otherLayers"></div>
+    <div *ngIf="showPlanes" [leafletLayers]="planesLayer"></div>
   </div>
 
   <div class="">
     <button class="other-layer-button" (click)="showLayer = !showLayer">Show layer</button>
+    <button class="other-layer-button" (click)="changeShowPlanes()">Show planes</button>
   </div>
 
 </div>

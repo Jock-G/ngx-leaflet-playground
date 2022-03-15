@@ -19,7 +19,9 @@
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
     "@asymmetrik/ngx-leaflet": "^13.0.2",
+    "@types/leaflet-rotatedmarker": "^0.2.2",
     "leaflet": "^1.7.1",
+    "leaflet-rotatedmarker": "^0.2.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
